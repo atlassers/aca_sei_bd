@@ -46,7 +46,7 @@ public class HallController {
     return hallService.update(hallDto);
   }
 
-  @DeleteMapping("/v1")
+  @DeleteMapping("/v1/{id}")
   public Boolean delete(Long id) {
     return hallService.delete(id);
   }

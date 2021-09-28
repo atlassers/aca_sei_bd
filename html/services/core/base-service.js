@@ -25,4 +25,8 @@ class BaseService {
     static delete(path, id) {
         return AjaxCore.callByUrl('DELETE', path + '/' + id);
     }
+
+	static formatDate(date){
+		return moment(date).format('YYYY-MM-DD');
+	}
 }

@@ -35,7 +35,7 @@ module('components/movie/movie.js');
 
 
 function inject(component, destination) {
-    $('#mainContainer').load('component/' + component, function () {
+    $('#mainContainer').load('components/' + component, function () {
         destination.load();
     });
 }

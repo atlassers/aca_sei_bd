@@ -42,7 +42,7 @@ public class MovieController {
     return movieService.update(movieDto);
   }
 
-  @DeleteMapping("/v1")
+  @DeleteMapping("/v1/{id}")
   public Boolean delete(@PathVariable Long id) {
     return movieService.delete(id);
   }

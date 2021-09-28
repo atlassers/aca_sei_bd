@@ -1,63 +1,4 @@
 <div class="card text-center aca-card">
-	<div class="card text-left">
-		<div class="card-header text-white bg-primary">
-			<i class="bi bi-star-fill"></i> Totals
-		</div>
-		<div class="card-body container py-1">
-			<div class="row">
- 			<div class="card text-center m-2 col text-white bg-primary">
- 				<div class="card-body p-1">
- 					<div id="totalPurchases" class="h2"></div>
- 					<div class="h6">Total Purchases</div>
- 				</div>
- 			</div>
- 			
- 			<div class="card text-center m-2 col text-white bg-success">
- 				<div class="card-body p-1">
- 					<div id="totalPurchasesValid" class="h2"></div>
- 					<div class="h6">Total Valid Purchases</div>
- 				</div>
- 			</div>
- 			
- 			<div class="card text-center m-2 col text-white bg-secondary">
- 				<div class="card-body p-1">
- 					<div id="totalPurchasesNotValid" class="h2"></div>
- 					<div class="h6">Total Not Valid Purchases</div>
- 				</div>
- 			</div>
- 		</div>
-		</div>
-	</div>
-	
-    <div class="card text-left">
-		<div class="card-header text-white bg-primary">
-			<i class="bi bi-star-fill"></i> Totals of Months
-		</div>
-		<div class="card-body container py-1">
-			<div class="row">
-	 			<div class="card text-center m-2 col text-white bg-danger">
-	 				<div class="card-body p-1">
-	 					<div class="h6">Total Price</div>
-	 					<div id="totalPurchasePriceOfMonths"></div>
-	 				</div>
-	 			</div>
-	 			
-	 			<div class="card text-center m-2 col text-white bg-warning">
-	 				<div class="card-body p-1">
-	 					<div class="h6">Total Discount</div>
-	 					<div id="totalPurchaseDiscountOfMonths"></div>
-	 				</div>
-	 			</div>
-	 			
-	 			<div class="card text-center m-2 col text-white bg-dark">
-	 				<div class="card-body p-1">
-	 					<div class="h6">Total Items</div>
-	 					<div id="totalPurchaseItemsOfMonths"></div>
-	 				</div>
-	 			</div>
-	 		</div>
- 		</div>
- 	</div>
     <div class="card-body">
         <h5 class="card-title text-center">Collegamento al BE</h5>
         <p class="card-text text-center">Tabella per visualizzare la response del BE</p>
@@ -67,28 +8,19 @@
     </div>
     <form id="saveForm" class="saveForm p-2">
         <div class="form-group">
-            <input id="purchaseId" class="form-control" type="number" name="purchaseId" placeholder="Purchase id">
+            <input id="movieId" class="form-control" type="number" name="movieId" placeholder="Movie id">
         </div>
         <div class="form-group">
-            <input id="dateTime" class="form-control" type="date" name="dateTime">
+            <input id="name" class="form-control" type="text" name="name" placeholder="Movie Name">
         </div>
         <div class="form-group">
-            <input id="totalNumberOfItems" class="form-control" type="number" name="totalNumberOfItems" placeholder="Enter Purchase Total Number Of Items">
-        </div>                
-        <div class="form-group">
-            <input id="totalPrice" class="form-control" type="number" step="0.01" name="totalPrice" placeholder="Enter Purchase Total Price">
+            <input id="movieLength" class="form-control" type="number" name="movieLength" placeholder="Movie Length (Minutes)">
         </div>
         <div class="form-group">
-            <input id="totalDiscount" class="form-control" type="number" step="0.01" name="totalDiscount" placeholder="Enter Purchase Total Discount">
+            <input id="releaseDate" class="form-control" type="date" name = "releaseDate" placeholder="Movie Release Date">
         </div>
-        <div class="form-group">
-            <input id="status" class="form-control" type="text" name="status" placeholder="Enter Purchase Status">
-        </div>
-        <div class="form-group">
-            <input id="customerId" class="form-control" type="number" name="customerId" placeholder="Enter Customer ID">
-        </div>
-        <div class="form-group">
-            <input id="btnSubmit" class="form-control btn btn-primary" type="submit" value="Save Purchase">
+		<div class="form-group">
+            <input id="btnSubmit" class="form-control btn btn-primary" type="submit" value="Save Movie">
         </div>
     </form>
 </div>

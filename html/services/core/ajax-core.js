@@ -2,7 +2,7 @@ const USERNAME = 'academy';
 const PASSWORD = 'academy';
 const BASE = 'http://localhost';
 const PORT = ':8100';
-const SERVICE_NAME = '/academy-cloud'
+const SERVICE_NAME = '/cinema'
 const URL = BASE + PORT + SERVICE_NAME;
 
 class AjaxCore {

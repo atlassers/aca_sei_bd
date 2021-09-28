@@ -1,48 +1,40 @@
-class Purchase {
-    constructor() { }
+class Movie {
+	constructor() { }
 
-	static load(){
-		PurchaseService.getTotals();
-		
-	    $('#btnShow').click(function () {
-	        PurchaseService.getAll();
-	    });
-	
-	    $('#btnAdd').click(function () {
-	        $('.table').empty();
-	        $('.table').hide();
-	        $('#saveForm').show();
-	    })
-	
-	    $('#saveForm').submit(function (event) {
-	        event.preventDefault();
-	
-	        var id = document.getElementById('purchaseId').value;
-			var dateTime = document.getElementById('dateTime').value + 'T00:00:00Z';
-			var totalNumberOfItems = document.getElementById('totalNumberOfItems').value;
-			var totalPrice = document.getElementById('totalPrice').value;
-			var totalDiscount = document.getElementById('totalDiscount').value;
-			var status = document.getElementById('status').value;
-			var customerId = document.getElementById('customerId').value;
-	
-	        var formData = {
-	            'dateTime': dateTime,
-				'totalNumberOfItems': totalNumberOfItems,
-				'totalPrice': totalPrice,
-				'totalDiscount': totalDiscount,
-				'status': status,
-				'customerId': customerId
-	        };
-	
+	static load() {
+		$('#btnShow').click(function() {
+			MovieService.getAll();
+		});
+
+		$('#btnAdd').click(function() {
+			$('.table').empty();
+			$('.table').hide();
+			$('#saveForm').show();
+		})
+
+		$('#saveForm').submit(function(event) {
+			event.preventDefault();
+
+			var id = document.getElementById('movieId').value;
+			var name = document.getElementById('name').value;
+			var movieLength = document.getElementById('movieLength').value;
+			var releaseDate = document.getElementById('releaseDate').value + 'T00:00:00Z';
+
+			var formData = {
+				'name': name,
+				'length': movieLength,
+				'releaseDate': releaseDate
+			};
+
 			var action;
-	        if (id) {
+			if (id) {
 				formData.id = id;
-	            action = PurchaseService.put;
-	        } else {
-	            action = PurchaseService.post;
-	        }
+				action = MovieService.put;
+			} else {
+				action = MovieService.post;
+			}
 			action(JSON.stringify(formData));
-	    });
+		});
 	}
 }
 
